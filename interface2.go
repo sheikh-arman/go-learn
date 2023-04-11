@@ -1,3 +1,4 @@
+package main
 import (
 	"fmt"
 )
@@ -10,5 +11,9 @@ func PrintAll(vals []interface{}) {
 
 func main() {
 	names := []string{"stanley", "david", "oscar"}
-	PrintAll(names)
+	vals:=make([]interface{},len(names))
+	for i,v:=range names{
+		vals[i]=v
+	}
+	PrintAll(vals)
 }
